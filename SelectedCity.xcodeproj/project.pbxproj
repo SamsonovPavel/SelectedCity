@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840369C91DE8DAE6008BFE83 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */; };
+		840369CA1DE8DAE6008BFE83 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */; };
+		840369CF1DE8DB21008BFE83 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */; };
+		840369D01DE8DB21008BFE83 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */; };
+		840369D51DE8DB55008BFE83 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */; };
+		840369D61DE8DB55008BFE83 /* PSGSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */; };
 		84FF4D5C1DE8D26E0067C874 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5B1DE8D26E0067C874 /* main.m */; };
 		84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */; };
 		84FF4D621DE8D26E0067C874 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D611DE8D26E0067C874 /* ViewController.m */; };
@@ -20,6 +26,17 @@
 /* Begin PBXFileReference section */
 		02C8DF6A8691F079C02B386B /* Pods_SelectedCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelectedCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBA0AA0FC9B843989FDC43C /* Pods-SelectedCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectedCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelectedCity/Pods-SelectedCity.debug.xcconfig"; sourceTree = "<group>"; };
+		840369C31DE8D93D008BFE83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "Supporting Files/PrefixHeader.pch"; sourceTree = "<group>"; };
+		840369C41DE8D97C008BFE83 /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macroses.h; path = Common/Macroses.h; sourceTree = "<group>"; };
+		840369C61DE8DAE6008BFE83 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGCountryVC.h; sourceTree = "<group>"; };
+		840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGCountryVC.m; sourceTree = "<group>"; };
+		840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGCountryVC.xib; sourceTree = "<group>"; };
+		840369CC1DE8DB21008BFE83 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGFavoritesVC.h; sourceTree = "<group>"; };
+		840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGFavoritesVC.m; sourceTree = "<group>"; };
+		840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGFavoritesVC.xib; sourceTree = "<group>"; };
+		840369D21DE8DB55008BFE83 /* PSGSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGSettingsVC.h; sourceTree = "<group>"; };
+		840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGSettingsVC.m; sourceTree = "<group>"; };
+		840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGSettingsVC.xib; sourceTree = "<group>"; };
 		84FF4D571DE8D26E0067C874 /* SelectedCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectedCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FF4D5B1DE8D26E0067C874 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84FF4D5D1DE8D26E0067C874 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,11 +80,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		840369C51DE8D98D008BFE83 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				840369C41DE8D97C008BFE83 /* Macroses.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		840369CB1DE8DAF5008BFE83 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				840369C61DE8DAE6008BFE83 /* PSGCountryVC.h */,
+				840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */,
+				840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */,
+			);
+			name = Country;
+			sourceTree = "<group>";
+		};
+		840369D11DE8DB26008BFE83 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				840369CC1DE8DB21008BFE83 /* PSGFavoritesVC.h */,
+				840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */,
+				840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		840369D71DE8DB61008BFE83 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				840369D21DE8DB55008BFE83 /* PSGSettingsVC.h */,
+				840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */,
+				840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		84FF4D4E1DE8D26E0067C874 = {
 			isa = PBXGroup;
 			children = (
 				84FF4D691DE8D26E0067C874 /* Assets.xcassets */,
 				84FF4D6E1DE8D26E0067C874 /* Info.plist */,
+				840369C31DE8D93D008BFE83 /* PrefixHeader.pch */,
 				84FF4D591DE8D26E0067C874 /* SelectedCity */,
 				84FF4D581DE8D26E0067C874 /* Products */,
 				80E91F78025A90D85BCEBAAD /* Pods */,
@@ -90,6 +146,10 @@
 				84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */,
 				84FF4D601DE8D26E0067C874 /* ViewController.h */,
 				84FF4D611DE8D26E0067C874 /* ViewController.m */,
+				840369CB1DE8DAF5008BFE83 /* Country */,
+				840369D11DE8DB26008BFE83 /* Favorites */,
+				840369D71DE8DB61008BFE83 /* Settings */,
+				840369C51DE8D98D008BFE83 /* Common */,
 				84FF4D631DE8D26E0067C874 /* Main.storyboard */,
 				84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */,
 				84FF4D5A1DE8D26E0067C874 /* Supporting Files */,
@@ -166,6 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840369D01DE8DB21008BFE83 /* PSGFavoritesVC.xib in Resources */,
+				840369CA1DE8DAE6008BFE83 /* PSGCountryVC.xib in Resources */,
+				840369D61DE8DB55008BFE83 /* PSGSettingsVC.xib in Resources */,
 				84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */,
 				84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */,
 				84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */,
@@ -228,9 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FF4D621DE8D26E0067C874 /* ViewController.m in Sources */,
+				840369D51DE8DB55008BFE83 /* PSGSettingsVC.m in Sources */,
+				840369C91DE8DAE6008BFE83 /* PSGCountryVC.m in Sources */,
 				84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */,
 				84FF4D5C1DE8D26E0067C874 /* main.m in Sources */,
 				84FF4D681DE8D26E0067C874 /* SelectedCity.xcdatamodeld in Sources */,
+				840369CF1DE8DB21008BFE83 /* PSGFavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +409,8 @@
 			baseConfigurationReference = 3DBA0AA0FC9B843989FDC43C /* Pods-SelectedCity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = SelectedCity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsonovpavel.inmoso.SelectedCity;
@@ -355,6 +423,8 @@
 			baseConfigurationReference = EFC5C2601AFC116F4128A659 /* Pods-SelectedCity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = SelectedCity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsonovpavel.inmoso.SelectedCity;

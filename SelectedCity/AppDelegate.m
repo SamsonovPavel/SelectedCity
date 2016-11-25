@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "PSGCountryVC.h"
+#import "PSGFavoritesVC.h"
+#import "PSGSettingsVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    PSGCountryVC *country = [[PSGCountryVC alloc] init];
+    country.tabBarItem.image = [UIImage imageNamed:@"im_country"];
+    country.tabBarItem.title = @"Страны";
+    
+    PSGFavoritesVC *favorites = [[PSGFavoritesVC alloc] init];
+    favorites.tabBarItem.image = [UIImage imageNamed:@"im_favorites"];
+    favorites.tabBarItem.title = @"Избранное";
+    
+    PSGSettingsVC *settings = [[PSGSettingsVC alloc] init];
+    settings.tabBarItem.image = [UIImage imageNamed:@"im_settings"];
+    settings.tabBarItem.title = @"Настройки";
+    
+    UINavigationController *countryNC = [[UINavigationController alloc] initWithRootViewController:country];
+    UINavigationController *favoritesNC = [[UINavigationController alloc] initWithRootViewController:favorites];
+    UINavigationController *settingsNC = [[UINavigationController alloc] initWithRootViewController:settings];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:countryNC, favoritesNC, settingsNC, nil];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
