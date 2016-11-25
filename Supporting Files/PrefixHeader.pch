@@ -18,6 +18,8 @@
 #import <CoreData/CoreData.h>
 
 // созданные классы
+#import "PSGCoreDataAPI.h"
+#import "PSGCommonMainVC.h"
 
 // макросы, константы
 #import "Macroses.h"

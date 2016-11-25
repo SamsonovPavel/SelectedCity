@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840369C91DE8DAE6008BFE83 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */; };
-		840369CA1DE8DAE6008BFE83 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */; };
-		840369CF1DE8DB21008BFE83 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */; };
-		840369D01DE8DB21008BFE83 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */; };
-		840369D51DE8DB55008BFE83 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */; };
-		840369D61DE8DB55008BFE83 /* PSGSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */; };
+		840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369D91DE8DE9E008BFE83 /* PSGCoreDataAPI.m */; };
+		840369DF1DE8DEEF008BFE83 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */; };
+		840369E01DE8DEEF008BFE83 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */; };
+		840369E41DE8DF1C008BFE83 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */; };
+		840369E51DE8DF1C008BFE83 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */; };
+		840369E91DE8DF42008BFE83 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */; };
+		840369EA1DE8DF42008BFE83 /* PSGSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */; };
+		840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */; };
 		84FF4D5C1DE8D26E0067C874 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5B1DE8D26E0067C874 /* main.m */; };
 		84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */; };
-		84FF4D621DE8D26E0067C874 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D611DE8D26E0067C874 /* ViewController.m */; };
 		84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D631DE8D26E0067C874 /* Main.storyboard */; };
 		84FF4D681DE8D26E0067C874 /* SelectedCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */; };
 		84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D691DE8D26E0067C874 /* Assets.xcassets */; };
@@ -28,21 +29,23 @@
 		3DBA0AA0FC9B843989FDC43C /* Pods-SelectedCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectedCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelectedCity/Pods-SelectedCity.debug.xcconfig"; sourceTree = "<group>"; };
 		840369C31DE8D93D008BFE83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "Supporting Files/PrefixHeader.pch"; sourceTree = "<group>"; };
 		840369C41DE8D97C008BFE83 /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macroses.h; path = Common/Macroses.h; sourceTree = "<group>"; };
-		840369C61DE8DAE6008BFE83 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGCountryVC.h; sourceTree = "<group>"; };
-		840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGCountryVC.m; sourceTree = "<group>"; };
-		840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGCountryVC.xib; sourceTree = "<group>"; };
-		840369CC1DE8DB21008BFE83 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGFavoritesVC.h; sourceTree = "<group>"; };
-		840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGFavoritesVC.m; sourceTree = "<group>"; };
-		840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGFavoritesVC.xib; sourceTree = "<group>"; };
-		840369D21DE8DB55008BFE83 /* PSGSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGSettingsVC.h; sourceTree = "<group>"; };
-		840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGSettingsVC.m; sourceTree = "<group>"; };
-		840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSGSettingsVC.xib; sourceTree = "<group>"; };
+		840369D81DE8DE9E008BFE83 /* PSGCoreDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCoreDataAPI.h; path = Common/CoreData/PSGCoreDataAPI.h; sourceTree = "<group>"; };
+		840369D91DE8DE9E008BFE83 /* PSGCoreDataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCoreDataAPI.m; path = Common/CoreData/PSGCoreDataAPI.m; sourceTree = "<group>"; };
+		840369DC1DE8DEEF008BFE83 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryVC.h; path = Country/PSGCountryVC.h; sourceTree = "<group>"; };
+		840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryVC.m; path = Country/PSGCountryVC.m; sourceTree = "<group>"; };
+		840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCountryVC.xib; path = Country/PSGCountryVC.xib; sourceTree = "<group>"; };
+		840369E11DE8DF1C008BFE83 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGFavoritesVC.h; path = Favorites/PSGFavoritesVC.h; sourceTree = "<group>"; };
+		840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGFavoritesVC.m; path = Favorites/PSGFavoritesVC.m; sourceTree = "<group>"; };
+		840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGFavoritesVC.xib; path = Favorites/PSGFavoritesVC.xib; sourceTree = "<group>"; };
+		840369E61DE8DF42008BFE83 /* PSGSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGSettingsVC.h; path = Settings/PSGSettingsVC.h; sourceTree = "<group>"; };
+		840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGSettingsVC.m; path = Settings/PSGSettingsVC.m; sourceTree = "<group>"; };
+		840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGSettingsVC.xib; path = Settings/PSGSettingsVC.xib; sourceTree = "<group>"; };
+		840369EB1DE8E280008BFE83 /* PSGCommonMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCommonMainVC.h; path = Common/SuperClasses/PSGCommonMainVC.h; sourceTree = "<group>"; };
+		840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCommonMainVC.m; path = Common/SuperClasses/PSGCommonMainVC.m; sourceTree = "<group>"; };
 		84FF4D571DE8D26E0067C874 /* SelectedCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectedCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FF4D5B1DE8D26E0067C874 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84FF4D5D1DE8D26E0067C874 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84FF4D601DE8D26E0067C874 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84FF4D611DE8D26E0067C874 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84FF4D641DE8D26E0067C874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FF4D671DE8D26E0067C874 /* SelectedCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelectedCity.xcdatamodel; sourceTree = "<group>"; };
 		84FF4D691DE8D26E0067C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SelectedCity/Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				840369C41DE8D97C008BFE83 /* Macroses.h */,
+				840369EE1DE8E286008BFE83 /* SuperClasses */,
+				840369DB1DE8DEA4008BFE83 /* CoreData */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -91,9 +96,9 @@
 		840369CB1DE8DAF5008BFE83 /* Country */ = {
 			isa = PBXGroup;
 			children = (
-				840369C61DE8DAE6008BFE83 /* PSGCountryVC.h */,
-				840369C71DE8DAE6008BFE83 /* PSGCountryVC.m */,
-				840369C81DE8DAE6008BFE83 /* PSGCountryVC.xib */,
+				840369DC1DE8DEEF008BFE83 /* PSGCountryVC.h */,
+				840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */,
+				840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */,
 			);
 			name = Country;
 			sourceTree = "<group>";
@@ -101,9 +106,9 @@
 		840369D11DE8DB26008BFE83 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				840369CC1DE8DB21008BFE83 /* PSGFavoritesVC.h */,
-				840369CD1DE8DB21008BFE83 /* PSGFavoritesVC.m */,
-				840369CE1DE8DB21008BFE83 /* PSGFavoritesVC.xib */,
+				840369E11DE8DF1C008BFE83 /* PSGFavoritesVC.h */,
+				840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */,
+				840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -111,11 +116,29 @@
 		840369D71DE8DB61008BFE83 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				840369D21DE8DB55008BFE83 /* PSGSettingsVC.h */,
-				840369D31DE8DB55008BFE83 /* PSGSettingsVC.m */,
-				840369D41DE8DB55008BFE83 /* PSGSettingsVC.xib */,
+				840369E61DE8DF42008BFE83 /* PSGSettingsVC.h */,
+				840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */,
+				840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		840369DB1DE8DEA4008BFE83 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				840369D81DE8DE9E008BFE83 /* PSGCoreDataAPI.h */,
+				840369D91DE8DE9E008BFE83 /* PSGCoreDataAPI.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		840369EE1DE8E286008BFE83 /* SuperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				840369EB1DE8E280008BFE83 /* PSGCommonMainVC.h */,
+				840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */,
+			);
+			name = SuperClasses;
 			sourceTree = "<group>";
 		};
 		84FF4D4E1DE8D26E0067C874 = {
@@ -144,14 +167,12 @@
 			children = (
 				84FF4D5D1DE8D26E0067C874 /* AppDelegate.h */,
 				84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */,
-				84FF4D601DE8D26E0067C874 /* ViewController.h */,
-				84FF4D611DE8D26E0067C874 /* ViewController.m */,
+				84FF4D631DE8D26E0067C874 /* Main.storyboard */,
+				84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */,
 				840369CB1DE8DAF5008BFE83 /* Country */,
 				840369D11DE8DB26008BFE83 /* Favorites */,
 				840369D71DE8DB61008BFE83 /* Settings */,
 				840369C51DE8D98D008BFE83 /* Common */,
-				84FF4D631DE8D26E0067C874 /* Main.storyboard */,
-				84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */,
 				84FF4D5A1DE8D26E0067C874 /* Supporting Files */,
 			);
 			path = SelectedCity;
@@ -226,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840369D01DE8DB21008BFE83 /* PSGFavoritesVC.xib in Resources */,
-				840369CA1DE8DAE6008BFE83 /* PSGCountryVC.xib in Resources */,
-				840369D61DE8DB55008BFE83 /* PSGSettingsVC.xib in Resources */,
+				840369E01DE8DEEF008BFE83 /* PSGCountryVC.xib in Resources */,
+				840369E51DE8DF1C008BFE83 /* PSGFavoritesVC.xib in Resources */,
+				840369EA1DE8DF42008BFE83 /* PSGSettingsVC.xib in Resources */,
 				84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */,
 				84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */,
 				84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */,
@@ -290,13 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FF4D621DE8D26E0067C874 /* ViewController.m in Sources */,
-				840369D51DE8DB55008BFE83 /* PSGSettingsVC.m in Sources */,
-				840369C91DE8DAE6008BFE83 /* PSGCountryVC.m in Sources */,
+				840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */,
 				84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */,
+				840369E91DE8DF42008BFE83 /* PSGSettingsVC.m in Sources */,
 				84FF4D5C1DE8D26E0067C874 /* main.m in Sources */,
+				840369DF1DE8DEEF008BFE83 /* PSGCountryVC.m in Sources */,
+				840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */,
 				84FF4D681DE8D26E0067C874 /* SelectedCity.xcdatamodeld in Sources */,
-				840369CF1DE8DB21008BFE83 /* PSGFavoritesVC.m in Sources */,
+				840369E41DE8DF1C008BFE83 /* PSGFavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
