@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369D91DE8DE9E008BFE83 /* PSGCoreDataAPI.m */; };
-		840369DF1DE8DEEF008BFE83 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */; };
-		840369E01DE8DEEF008BFE83 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */; };
-		840369E41DE8DF1C008BFE83 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */; };
-		840369E51DE8DF1C008BFE83 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */; };
-		840369E91DE8DF42008BFE83 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */; };
-		840369EA1DE8DF42008BFE83 /* PSGSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */; };
 		840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */; };
-		84FF4D5C1DE8D26E0067C874 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5B1DE8D26E0067C874 /* main.m */; };
-		84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */; };
+		84564EE51DE9B12D00A6BA22 /* PSGApiConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 84564EE41DE9B12D00A6BA22 /* PSGApiConnection.m */; };
+		84564EE91DE9B1C200A6BA22 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84564EE81DE9B1C200A6BA22 /* Reachability.m */; };
+		8496ED961DE9A97300609367 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED941DE9A97300609367 /* PSGCountryVC.m */; };
+		8496ED971DE9A97300609367 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496ED951DE9A97300609367 /* PSGCountryVC.xib */; };
+		8496ED9B1DE9A98000609367 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED991DE9A98000609367 /* PSGFavoritesVC.m */; };
+		8496ED9C1DE9A98000609367 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496ED9A1DE9A98000609367 /* PSGFavoritesVC.xib */; };
+		8496EDA01DE9A98C00609367 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED9E1DE9A98C00609367 /* PSGSettingsVC.m */; };
+		8496EDA11DE9A98C00609367 /* PSGSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496ED9F1DE9A98C00609367 /* PSGSettingsVC.xib */; };
+		8496EDA41DE9A9BA00609367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA31DE9A9BA00609367 /* AppDelegate.m */; };
+		8496EDA71DE9AA3A00609367 /* SelectedCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA51DE9AA3A00609367 /* SelectedCity.xcdatamodeld */; };
+		8496EDAB1DE9AA9F00609367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA91DE9AA9F00609367 /* main.m */; };
 		84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D631DE8D26E0067C874 /* Main.storyboard */; };
-		84FF4D681DE8D26E0067C874 /* SelectedCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */; };
 		84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D691DE8D26E0067C874 /* Assets.xcassets */; };
 		84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D6B1DE8D26E0067C874 /* LaunchScreen.storyboard */; };
 		C3D0D31360E30DFB75CF595A /* Pods_SelectedCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8DF6A8691F079C02B386B /* Pods_SelectedCity.framework */; };
@@ -27,30 +29,34 @@
 /* Begin PBXFileReference section */
 		02C8DF6A8691F079C02B386B /* Pods_SelectedCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelectedCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBA0AA0FC9B843989FDC43C /* Pods-SelectedCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectedCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelectedCity/Pods-SelectedCity.debug.xcconfig"; sourceTree = "<group>"; };
-		840369C31DE8D93D008BFE83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "Supporting Files/PrefixHeader.pch"; sourceTree = "<group>"; };
+		840369C31DE8D93D008BFE83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "../Supporting Files/PrefixHeader.pch"; sourceTree = "<group>"; };
 		840369C41DE8D97C008BFE83 /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macroses.h; path = Common/Macroses.h; sourceTree = "<group>"; };
 		840369D81DE8DE9E008BFE83 /* PSGCoreDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCoreDataAPI.h; path = Common/CoreData/PSGCoreDataAPI.h; sourceTree = "<group>"; };
 		840369D91DE8DE9E008BFE83 /* PSGCoreDataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCoreDataAPI.m; path = Common/CoreData/PSGCoreDataAPI.m; sourceTree = "<group>"; };
-		840369DC1DE8DEEF008BFE83 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryVC.h; path = Country/PSGCountryVC.h; sourceTree = "<group>"; };
-		840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryVC.m; path = Country/PSGCountryVC.m; sourceTree = "<group>"; };
-		840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCountryVC.xib; path = Country/PSGCountryVC.xib; sourceTree = "<group>"; };
-		840369E11DE8DF1C008BFE83 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGFavoritesVC.h; path = Favorites/PSGFavoritesVC.h; sourceTree = "<group>"; };
-		840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGFavoritesVC.m; path = Favorites/PSGFavoritesVC.m; sourceTree = "<group>"; };
-		840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGFavoritesVC.xib; path = Favorites/PSGFavoritesVC.xib; sourceTree = "<group>"; };
-		840369E61DE8DF42008BFE83 /* PSGSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGSettingsVC.h; path = Settings/PSGSettingsVC.h; sourceTree = "<group>"; };
-		840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGSettingsVC.m; path = Settings/PSGSettingsVC.m; sourceTree = "<group>"; };
-		840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGSettingsVC.xib; path = Settings/PSGSettingsVC.xib; sourceTree = "<group>"; };
 		840369EB1DE8E280008BFE83 /* PSGCommonMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCommonMainVC.h; path = Common/SuperClasses/PSGCommonMainVC.h; sourceTree = "<group>"; };
 		840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCommonMainVC.m; path = Common/SuperClasses/PSGCommonMainVC.m; sourceTree = "<group>"; };
+		84564EE31DE9B12D00A6BA22 /* PSGApiConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGApiConnection.h; path = Common/Internet/PSGApiConnection.h; sourceTree = "<group>"; };
+		84564EE41DE9B12D00A6BA22 /* PSGApiConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGApiConnection.m; path = Common/Internet/PSGApiConnection.m; sourceTree = "<group>"; };
+		84564EE71DE9B1C200A6BA22 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Common/Internet/Reachability.h; sourceTree = "<group>"; };
+		84564EE81DE9B1C200A6BA22 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Common/Internet/Reachability.m; sourceTree = "<group>"; };
+		8496ED931DE9A97300609367 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryVC.h; path = Classes/Country/PSGCountryVC.h; sourceTree = "<group>"; };
+		8496ED941DE9A97300609367 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryVC.m; path = Classes/Country/PSGCountryVC.m; sourceTree = "<group>"; };
+		8496ED951DE9A97300609367 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCountryVC.xib; path = Classes/Country/PSGCountryVC.xib; sourceTree = "<group>"; };
+		8496ED981DE9A98000609367 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGFavoritesVC.h; path = Classes/Favorites/PSGFavoritesVC.h; sourceTree = "<group>"; };
+		8496ED991DE9A98000609367 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGFavoritesVC.m; path = Classes/Favorites/PSGFavoritesVC.m; sourceTree = "<group>"; };
+		8496ED9A1DE9A98000609367 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGFavoritesVC.xib; path = Classes/Favorites/PSGFavoritesVC.xib; sourceTree = "<group>"; };
+		8496ED9D1DE9A98C00609367 /* PSGSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGSettingsVC.h; path = Classes/Settings/PSGSettingsVC.h; sourceTree = "<group>"; };
+		8496ED9E1DE9A98C00609367 /* PSGSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGSettingsVC.m; path = Classes/Settings/PSGSettingsVC.m; sourceTree = "<group>"; };
+		8496ED9F1DE9A98C00609367 /* PSGSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGSettingsVC.xib; path = Classes/Settings/PSGSettingsVC.xib; sourceTree = "<group>"; };
+		8496EDA21DE9A9BA00609367 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		8496EDA31DE9A9BA00609367 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		8496EDA61DE9AA3A00609367 /* SelectedCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelectedCity.xcdatamodel; sourceTree = "<group>"; };
+		8496EDA81DE9AA9F00609367 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		8496EDA91DE9AA9F00609367 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = SOURCE_ROOT; };
 		84FF4D571DE8D26E0067C874 /* SelectedCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectedCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		84FF4D5B1DE8D26E0067C874 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84FF4D5D1DE8D26E0067C874 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84FF4D641DE8D26E0067C874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84FF4D671DE8D26E0067C874 /* SelectedCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelectedCity.xcdatamodel; sourceTree = "<group>"; };
-		84FF4D691DE8D26E0067C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SelectedCity/Assets.xcassets; sourceTree = "<group>"; };
+		84FF4D691DE8D26E0067C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84FF4D6C1DE8D26E0067C874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		84FF4D6E1DE8D26E0067C874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SelectedCity/Info.plist; sourceTree = "<group>"; };
 		EFC5C2601AFC116F4128A659 /* Pods-SelectedCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectedCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelectedCity/Pods-SelectedCity.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				840369C41DE8D97C008BFE83 /* Macroses.h */,
+				84564EE61DE9B13300A6BA22 /* Internet */,
 				840369EE1DE8E286008BFE83 /* SuperClasses */,
 				840369DB1DE8DEA4008BFE83 /* CoreData */,
 			);
@@ -96,9 +103,9 @@
 		840369CB1DE8DAF5008BFE83 /* Country */ = {
 			isa = PBXGroup;
 			children = (
-				840369DC1DE8DEEF008BFE83 /* PSGCountryVC.h */,
-				840369DD1DE8DEEF008BFE83 /* PSGCountryVC.m */,
-				840369DE1DE8DEEF008BFE83 /* PSGCountryVC.xib */,
+				8496ED931DE9A97300609367 /* PSGCountryVC.h */,
+				8496ED941DE9A97300609367 /* PSGCountryVC.m */,
+				8496ED951DE9A97300609367 /* PSGCountryVC.xib */,
 			);
 			name = Country;
 			sourceTree = "<group>";
@@ -106,9 +113,9 @@
 		840369D11DE8DB26008BFE83 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				840369E11DE8DF1C008BFE83 /* PSGFavoritesVC.h */,
-				840369E21DE8DF1C008BFE83 /* PSGFavoritesVC.m */,
-				840369E31DE8DF1C008BFE83 /* PSGFavoritesVC.xib */,
+				8496ED981DE9A98000609367 /* PSGFavoritesVC.h */,
+				8496ED991DE9A98000609367 /* PSGFavoritesVC.m */,
+				8496ED9A1DE9A98000609367 /* PSGFavoritesVC.xib */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -116,9 +123,9 @@
 		840369D71DE8DB61008BFE83 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				840369E61DE8DF42008BFE83 /* PSGSettingsVC.h */,
-				840369E71DE8DF42008BFE83 /* PSGSettingsVC.m */,
-				840369E81DE8DF42008BFE83 /* PSGSettingsVC.xib */,
+				8496ED9D1DE9A98C00609367 /* PSGSettingsVC.h */,
+				8496ED9E1DE9A98C00609367 /* PSGSettingsVC.m */,
+				8496ED9F1DE9A98C00609367 /* PSGSettingsVC.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -141,12 +148,66 @@
 			name = SuperClasses;
 			sourceTree = "<group>";
 		};
-		84FF4D4E1DE8D26E0067C874 = {
+		84564EE61DE9B13300A6BA22 /* Internet */ = {
+			isa = PBXGroup;
+			children = (
+				84564EE31DE9B12D00A6BA22 /* PSGApiConnection.h */,
+				84564EE41DE9B12D00A6BA22 /* PSGApiConnection.m */,
+				84564EE71DE9B1C200A6BA22 /* Reachability.h */,
+				84564EE81DE9B1C200A6BA22 /* Reachability.m */,
+			);
+			name = Internet;
+			sourceTree = "<group>";
+		};
+		8496ED8D1DE9A73900609367 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				84FF4D691DE8D26E0067C874 /* Assets.xcassets */,
-				84FF4D6E1DE8D26E0067C874 /* Info.plist */,
-				840369C31DE8D93D008BFE83 /* PrefixHeader.pch */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		8496ED8E1DE9A77700609367 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84FF4D631DE8D26E0067C874 /* Main.storyboard */,
+				84FF4D6B1DE8D26E0067C874 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		8496ED8F1DE9A7BD00609367 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8496ED8D1DE9A73900609367 /* Images */,
+				8496ED8E1DE9A77700609367 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8496ED901DE9A7F000609367 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8496EDA21DE9A9BA00609367 /* AppDelegate.h */,
+				8496EDA31DE9A9BA00609367 /* AppDelegate.m */,
+				840369CB1DE8DAF5008BFE83 /* Country */,
+				840369D11DE8DB26008BFE83 /* Favorites */,
+				840369D71DE8DB61008BFE83 /* Settings */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8496ED911DE9A87900609367 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8496EDA51DE9AA3A00609367 /* SelectedCity.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84FF4D4E1DE8D26E0067C874 = {
+			isa = PBXGroup;
+			children = (
 				84FF4D591DE8D26E0067C874 /* SelectedCity */,
 				84FF4D581DE8D26E0067C874 /* Products */,
 				80E91F78025A90D85BCEBAAD /* Pods */,
@@ -165,14 +226,10 @@
 		84FF4D591DE8D26E0067C874 /* SelectedCity */ = {
 			isa = PBXGroup;
 			children = (
-				84FF4D5D1DE8D26E0067C874 /* AppDelegate.h */,
-				84FF4D5E1DE8D26E0067C874 /* AppDelegate.m */,
-				84FF4D631DE8D26E0067C874 /* Main.storyboard */,
-				84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */,
-				840369CB1DE8DAF5008BFE83 /* Country */,
-				840369D11DE8DB26008BFE83 /* Favorites */,
-				840369D71DE8DB61008BFE83 /* Settings */,
+				8496ED901DE9A7F000609367 /* Classes */,
 				840369C51DE8D98D008BFE83 /* Common */,
+				8496ED911DE9A87900609367 /* Models */,
+				8496ED8F1DE9A7BD00609367 /* Resources */,
 				84FF4D5A1DE8D26E0067C874 /* Supporting Files */,
 			);
 			path = SelectedCity;
@@ -181,8 +238,9 @@
 		84FF4D5A1DE8D26E0067C874 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84FF4D6B1DE8D26E0067C874 /* LaunchScreen.storyboard */,
-				84FF4D5B1DE8D26E0067C874 /* main.m */,
+				8496EDA81DE9AA9F00609367 /* Info.plist */,
+				8496EDA91DE9AA9F00609367 /* main.m */,
+				840369C31DE8D93D008BFE83 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,12 +305,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840369E01DE8DEEF008BFE83 /* PSGCountryVC.xib in Resources */,
-				840369E51DE8DF1C008BFE83 /* PSGFavoritesVC.xib in Resources */,
-				840369EA1DE8DF42008BFE83 /* PSGSettingsVC.xib in Resources */,
+				8496ED9C1DE9A98000609367 /* PSGFavoritesVC.xib in Resources */,
+				8496ED971DE9A97300609367 /* PSGCountryVC.xib in Resources */,
 				84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */,
 				84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */,
 				84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */,
+				8496EDA11DE9A98C00609367 /* PSGSettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,13 +370,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */,
-				84FF4D5F1DE8D26E0067C874 /* AppDelegate.m in Sources */,
-				840369E91DE8DF42008BFE83 /* PSGSettingsVC.m in Sources */,
-				84FF4D5C1DE8D26E0067C874 /* main.m in Sources */,
-				840369DF1DE8DEEF008BFE83 /* PSGCountryVC.m in Sources */,
+				8496EDA41DE9A9BA00609367 /* AppDelegate.m in Sources */,
+				8496ED9B1DE9A98000609367 /* PSGFavoritesVC.m in Sources */,
+				8496EDA71DE9AA3A00609367 /* SelectedCity.xcdatamodeld in Sources */,
+				84564EE91DE9B1C200A6BA22 /* Reachability.m in Sources */,
+				8496EDA01DE9A98C00609367 /* PSGSettingsVC.m in Sources */,
+				84564EE51DE9B12D00A6BA22 /* PSGApiConnection.m in Sources */,
 				840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */,
-				84FF4D681DE8D26E0067C874 /* SelectedCity.xcdatamodeld in Sources */,
-				840369E41DE8DF1C008BFE83 /* PSGFavoritesVC.m in Sources */,
+				8496EDAB1DE9AA9F00609367 /* main.m in Sources */,
+				8496ED961DE9A97300609367 /* PSGCountryVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/PrefixHeader.pch";
-				INFOPLIST_FILE = SelectedCity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsonovpavel.inmoso.SelectedCity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/PrefixHeader.pch";
-				INFOPLIST_FILE = SelectedCity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsonovpavel.inmoso.SelectedCity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,13 +538,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		84FF4D661DE8D26E0067C874 /* SelectedCity.xcdatamodeld */ = {
+		8496EDA51DE9AA3A00609367 /* SelectedCity.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				84FF4D671DE8D26E0067C874 /* SelectedCity.xcdatamodel */,
+				8496EDA61DE9AA3A00609367 /* SelectedCity.xcdatamodel */,
 			);
-			currentVersion = 84FF4D671DE8D26E0067C874 /* SelectedCity.xcdatamodel */;
-			path = SelectedCity.xcdatamodeld;
+			currentVersion = 8496EDA61DE9AA3A00609367 /* SelectedCity.xcdatamodel */;
+			name = SelectedCity.xcdatamodeld;
+			path = Models/SelectedCity.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

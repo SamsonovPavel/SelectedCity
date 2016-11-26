@@ -16,10 +16,12 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
+#import "Reachability.h"
 
 // созданные классы
 #import "PSGCoreDataAPI.h"
 #import "PSGCommonMainVC.h"
+#import "PSGApiConnection.h"
 
 // макросы, константы
 #import "Macroses.h"
