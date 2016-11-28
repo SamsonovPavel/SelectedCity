@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "PSGCountryVC.h"
+#import "PSGCountryTVC.h"
 #import "PSGFavoritesVC.h"
 #import "PSGSettingsVC.h"
 
@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    PSGCountryVC *country = [[PSGCountryVC alloc] init];
+    PSGCountryTVC *country = [[PSGCountryTVC alloc] initWithStyle:UITableViewStylePlain];
     country.tabBarItem.image = [UIImage imageNamed:@"im_country"];
     country.tabBarItem.title = @"Страны";
     

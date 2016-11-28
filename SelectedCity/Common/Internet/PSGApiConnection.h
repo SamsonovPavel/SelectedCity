@@ -14,8 +14,7 @@
 - (BOOL)connectedToInternet; // проверяет подключение к сети
 
 //Получение данных с сервера
-
-- (void)getDataWithSuccefullHandler:(void(^_Nonnull)(id _Nonnull serverData))successHandler
+- (void)getDataWithSuccefullHandler:(void(^_Nonnull)(id _Nonnull data))successHandler
                     connectionError:(void(^_Nonnull)(NSError *_Nonnull error))connectionErrorHandler;
 
 @end

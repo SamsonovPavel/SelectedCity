@@ -11,8 +11,8 @@
 		840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840369EC1DE8E280008BFE83 /* PSGCommonMainVC.m */; };
 		84564EE51DE9B12D00A6BA22 /* PSGApiConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 84564EE41DE9B12D00A6BA22 /* PSGApiConnection.m */; };
 		84564EE91DE9B1C200A6BA22 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84564EE81DE9B1C200A6BA22 /* Reachability.m */; };
-		8496ED961DE9A97300609367 /* PSGCountryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED941DE9A97300609367 /* PSGCountryVC.m */; };
-		8496ED971DE9A97300609367 /* PSGCountryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496ED951DE9A97300609367 /* PSGCountryVC.xib */; };
+		848CAC301DE9EE0400859BCC /* PSGCountryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CAC2F1DE9EE0400859BCC /* PSGCountryTVC.m */; };
+		848CAC391DEA2DD900859BCC /* PSGHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CAC381DEA2DD900859BCC /* PSGHelper.m */; };
 		8496ED9B1DE9A98000609367 /* PSGFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED991DE9A98000609367 /* PSGFavoritesVC.m */; };
 		8496ED9C1DE9A98000609367 /* PSGFavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496ED9A1DE9A98000609367 /* PSGFavoritesVC.xib */; };
 		8496EDA01DE9A98C00609367 /* PSGSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496ED9E1DE9A98C00609367 /* PSGSettingsVC.m */; };
@@ -20,6 +20,10 @@
 		8496EDA41DE9A9BA00609367 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA31DE9A9BA00609367 /* AppDelegate.m */; };
 		8496EDA71DE9AA3A00609367 /* SelectedCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA51DE9AA3A00609367 /* SelectedCity.xcdatamodeld */; };
 		8496EDAB1DE9AA9F00609367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA91DE9AA9F00609367 /* main.m */; };
+		84E502DE1DEAF81000182B44 /* PSGCountryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E502DC1DEAF81000182B44 /* PSGCountryTableViewCell.m */; };
+		84E502DF1DEAF81000182B44 /* PSGCountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E502DD1DEAF81000182B44 /* PSGCountryTableViewCell.xib */; };
+		84E502E31DEAF86D00182B44 /* PSGCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E502E11DEAF86D00182B44 /* PSGCityTableViewCell.m */; };
+		84E502E41DEAF86D00182B44 /* PSGCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E502E21DEAF86D00182B44 /* PSGCityTableViewCell.xib */; };
 		84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D631DE8D26E0067C874 /* Main.storyboard */; };
 		84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D691DE8D26E0067C874 /* Assets.xcassets */; };
 		84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FF4D6B1DE8D26E0067C874 /* LaunchScreen.storyboard */; };
@@ -39,9 +43,10 @@
 		84564EE41DE9B12D00A6BA22 /* PSGApiConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGApiConnection.m; path = Common/Internet/PSGApiConnection.m; sourceTree = "<group>"; };
 		84564EE71DE9B1C200A6BA22 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Common/Internet/Reachability.h; sourceTree = "<group>"; };
 		84564EE81DE9B1C200A6BA22 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Common/Internet/Reachability.m; sourceTree = "<group>"; };
-		8496ED931DE9A97300609367 /* PSGCountryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryVC.h; path = Classes/Country/PSGCountryVC.h; sourceTree = "<group>"; };
-		8496ED941DE9A97300609367 /* PSGCountryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryVC.m; path = Classes/Country/PSGCountryVC.m; sourceTree = "<group>"; };
-		8496ED951DE9A97300609367 /* PSGCountryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCountryVC.xib; path = Classes/Country/PSGCountryVC.xib; sourceTree = "<group>"; };
+		848CAC2E1DE9EE0400859BCC /* PSGCountryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryTVC.h; path = Classes/Country/PSGCountryTVC.h; sourceTree = "<group>"; };
+		848CAC2F1DE9EE0400859BCC /* PSGCountryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryTVC.m; path = Classes/Country/PSGCountryTVC.m; sourceTree = "<group>"; };
+		848CAC371DEA2DD900859BCC /* PSGHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGHelper.h; path = Common/Support/PSGHelper.h; sourceTree = "<group>"; };
+		848CAC381DEA2DD900859BCC /* PSGHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGHelper.m; path = Common/Support/PSGHelper.m; sourceTree = "<group>"; };
 		8496ED981DE9A98000609367 /* PSGFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGFavoritesVC.h; path = Classes/Favorites/PSGFavoritesVC.h; sourceTree = "<group>"; };
 		8496ED991DE9A98000609367 /* PSGFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGFavoritesVC.m; path = Classes/Favorites/PSGFavoritesVC.m; sourceTree = "<group>"; };
 		8496ED9A1DE9A98000609367 /* PSGFavoritesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGFavoritesVC.xib; path = Classes/Favorites/PSGFavoritesVC.xib; sourceTree = "<group>"; };
@@ -53,6 +58,12 @@
 		8496EDA61DE9AA3A00609367 /* SelectedCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelectedCity.xcdatamodel; sourceTree = "<group>"; };
 		8496EDA81DE9AA9F00609367 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8496EDA91DE9AA9F00609367 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = SOURCE_ROOT; };
+		84E502DB1DEAF81000182B44 /* PSGCountryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCountryTableViewCell.h; path = Classes/Country/Cell/CountryCell/PSGCountryTableViewCell.h; sourceTree = "<group>"; };
+		84E502DC1DEAF81000182B44 /* PSGCountryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCountryTableViewCell.m; path = Classes/Country/Cell/CountryCell/PSGCountryTableViewCell.m; sourceTree = "<group>"; };
+		84E502DD1DEAF81000182B44 /* PSGCountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCountryTableViewCell.xib; path = Classes/Country/Cell/CountryCell/PSGCountryTableViewCell.xib; sourceTree = "<group>"; };
+		84E502E01DEAF86D00182B44 /* PSGCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGCityTableViewCell.h; path = Classes/Country/Cell/CityCell/PSGCityTableViewCell.h; sourceTree = "<group>"; };
+		84E502E11DEAF86D00182B44 /* PSGCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGCityTableViewCell.m; path = Classes/Country/Cell/CityCell/PSGCityTableViewCell.m; sourceTree = "<group>"; };
+		84E502E21DEAF86D00182B44 /* PSGCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGCityTableViewCell.xib; path = Classes/Country/Cell/CityCell/PSGCityTableViewCell.xib; sourceTree = "<group>"; };
 		84FF4D571DE8D26E0067C874 /* SelectedCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectedCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FF4D641DE8D26E0067C874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FF4D691DE8D26E0067C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +103,7 @@
 		840369C51DE8D98D008BFE83 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				840369C41DE8D97C008BFE83 /* Macroses.h */,
+				848CAC3A1DEA2DF400859BCC /* Support */,
 				84564EE61DE9B13300A6BA22 /* Internet */,
 				840369EE1DE8E286008BFE83 /* SuperClasses */,
 				840369DB1DE8DEA4008BFE83 /* CoreData */,
@@ -103,9 +114,9 @@
 		840369CB1DE8DAF5008BFE83 /* Country */ = {
 			isa = PBXGroup;
 			children = (
-				8496ED931DE9A97300609367 /* PSGCountryVC.h */,
-				8496ED941DE9A97300609367 /* PSGCountryVC.m */,
-				8496ED951DE9A97300609367 /* PSGCountryVC.xib */,
+				848CAC2E1DE9EE0400859BCC /* PSGCountryTVC.h */,
+				848CAC2F1DE9EE0400859BCC /* PSGCountryTVC.m */,
+				848CAC361DEA26CE00859BCC /* Cell */,
 			);
 			name = Country;
 			sourceTree = "<group>";
@@ -159,6 +170,25 @@
 			name = Internet;
 			sourceTree = "<group>";
 		};
+		848CAC361DEA26CE00859BCC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84E502DA1DEAF75E00182B44 /* CountryCell */,
+				84E502E51DEAF87F00182B44 /* CityCell */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		848CAC3A1DEA2DF400859BCC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				840369C41DE8D97C008BFE83 /* Macroses.h */,
+				848CAC371DEA2DD900859BCC /* PSGHelper.h */,
+				848CAC381DEA2DD900859BCC /* PSGHelper.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		8496ED8D1DE9A73900609367 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +233,26 @@
 				8496EDA51DE9AA3A00609367 /* SelectedCity.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		84E502DA1DEAF75E00182B44 /* CountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				84E502DB1DEAF81000182B44 /* PSGCountryTableViewCell.h */,
+				84E502DC1DEAF81000182B44 /* PSGCountryTableViewCell.m */,
+				84E502DD1DEAF81000182B44 /* PSGCountryTableViewCell.xib */,
+			);
+			name = CountryCell;
+			sourceTree = "<group>";
+		};
+		84E502E51DEAF87F00182B44 /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				84E502E01DEAF86D00182B44 /* PSGCityTableViewCell.h */,
+				84E502E11DEAF86D00182B44 /* PSGCityTableViewCell.m */,
+				84E502E21DEAF86D00182B44 /* PSGCityTableViewCell.xib */,
+			);
+			name = CityCell;
 			sourceTree = "<group>";
 		};
 		84FF4D4E1DE8D26E0067C874 = {
@@ -306,10 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8496ED9C1DE9A98000609367 /* PSGFavoritesVC.xib in Resources */,
-				8496ED971DE9A97300609367 /* PSGCountryVC.xib in Resources */,
 				84FF4D6D1DE8D26E0067C874 /* LaunchScreen.storyboard in Resources */,
 				84FF4D6A1DE8D26E0067C874 /* Assets.xcassets in Resources */,
+				84E502DF1DEAF81000182B44 /* PSGCountryTableViewCell.xib in Resources */,
 				84FF4D651DE8D26E0067C874 /* Main.storyboard in Resources */,
+				84E502E41DEAF86D00182B44 /* PSGCityTableViewCell.xib in Resources */,
 				8496EDA11DE9A98C00609367 /* PSGSettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,16 +420,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848CAC391DEA2DD900859BCC /* PSGHelper.m in Sources */,
 				840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */,
 				8496EDA41DE9A9BA00609367 /* AppDelegate.m in Sources */,
 				8496ED9B1DE9A98000609367 /* PSGFavoritesVC.m in Sources */,
 				8496EDA71DE9AA3A00609367 /* SelectedCity.xcdatamodeld in Sources */,
 				84564EE91DE9B1C200A6BA22 /* Reachability.m in Sources */,
+				84E502DE1DEAF81000182B44 /* PSGCountryTableViewCell.m in Sources */,
+				84E502E31DEAF86D00182B44 /* PSGCityTableViewCell.m in Sources */,
 				8496EDA01DE9A98C00609367 /* PSGSettingsVC.m in Sources */,
 				84564EE51DE9B12D00A6BA22 /* PSGApiConnection.m in Sources */,
 				840369ED1DE8E280008BFE83 /* PSGCommonMainVC.m in Sources */,
 				8496EDAB1DE9AA9F00609367 /* main.m in Sources */,
-				8496ED961DE9A97300609367 /* PSGCountryVC.m in Sources */,
+				848CAC301DE9EE0400859BCC /* PSGCountryTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

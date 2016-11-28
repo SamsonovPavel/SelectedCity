@@ -17,11 +17,14 @@
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
 #import "Reachability.h"
+#import "UIImageView+WebCache.h" // кэш изображений
+#import "SDWebImageManager.h"
 
 // созданные классы
 #import "PSGCoreDataAPI.h"
 #import "PSGCommonMainVC.h"
 #import "PSGApiConnection.h"
+#import "PSGHelper.h"
 
 // макросы, константы
 #import "Macroses.h"

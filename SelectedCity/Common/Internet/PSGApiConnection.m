@@ -37,7 +37,7 @@
     {
         self.timeoutInterval   = 25.0;
         self.getMethodTitle    = @"GET";
-        self.serverPath = @"https://atw-backend.azurewebsites.net/api/countries";
+        self.serverPath        = @"https://atw-backend.azurewebsites.net/api/countries";
     }
     return self;
 }
@@ -118,23 +118,10 @@
 }
 
 //Получение данных с сервера
-- (void)getDataWithSuccefullHandler:(void(^)(id serverData))successHandler
+- (void)getDataWithSuccefullHandler:(void(^)(id data))successHandler
                     connectionError:(void(^)(NSError *error))connectionErrorHandler
 {
     [self standartGETWithURLString:self.serverPath succefullHandler:successHandler connectionError:connectionErrorHandler];
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
