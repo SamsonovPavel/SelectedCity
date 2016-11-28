@@ -26,5 +26,6 @@ static BOOL cityTableSectionsNumber1,
 + (PSGHelper *)sharedInstance;
 
 - (UIFont *)setFontSize;
+- (UIColor *)colorSelectedCell;
 
 @end

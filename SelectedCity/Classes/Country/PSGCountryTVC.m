@@ -193,8 +193,10 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 - (void)configureCountryCell:(PSGCountryTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     PSGCountryTableViewCell *countryCell = (PSGCountryTableViewCell *)cell;
+    countryCell.selectedBackgroundView = [[UIView alloc] init];
+    countryCell.selectedBackgroundView.backgroundColor = [PSGHelper sharedInstance].colorSelectedCell;
+
     NSInteger index = indexPath.section / 2;
-    
     NSString *imagePath = [[self.loadDataArray objectAtIndex:index] valueForKey:@"ImageLink"];
     NSURL *imageURL = [NSURL URLWithString:imagePath];
     [countryCell.flagImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
@@ -208,6 +210,9 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 - (void)configureCityCell:(PSGCityTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     PSGCityTableViewCell *cityCell = (PSGCityTableViewCell *)cell;
+    cityCell.selectedBackgroundView = [[UIView alloc] init];
+    cityCell.selectedBackgroundView.backgroundColor = [PSGHelper sharedInstance].colorSelectedCell;
+    
     NSInteger index = indexPath.section / 2;
     NSArray *cities = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
     
