@@ -25,6 +25,11 @@
 #import "PSGCommonMainVC.h"
 #import "PSGApiConnection.h"
 #import "PSGHelper.h"
+#import "UIView+UITableViewCell.h"
+
+#import "ParentClass.h"
+#import "Cities.h"
+
 
 // макросы, константы
 #import "Macroses.h"

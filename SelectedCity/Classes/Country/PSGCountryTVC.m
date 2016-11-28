@@ -16,7 +16,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 #define kCountryCellReuseIdn @"CountryCell"
 #define kCityCellReuseIdn    @"CityCell"
 
-@interface PSGCountryTVC ()
+@interface PSGCountryTVC () <PSGCityCellDelegate>
 
 @property (strong, nonatomic) NSArray *loadDataArray;
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
@@ -108,6 +108,29 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     NSIndexSet *set = [NSIndexSet indexSetWithIndex:indexPath.section + 1];
     [self.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
+}
+
+#pragma mark - PSGCityCellDelegate
+
+- (void)cellFavoritesButtonPressed:(PSGCityTableViewCell *)sender button:(UIButton *)button
+{
+    UITableViewCell *cell = [button superTableViewCell];
+    
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    NSLog(@"%@", indexPath);
+    
+    if (cell)
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        NSLog(@"%ld", indexPath.section);
+        
+        Cities *cities = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Cities class])
+                                                       inManagedObjectContext:[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext];
+        if (cities != nil)
+        {
+            
+        }
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -210,8 +233,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 - (void)configureCityCell:(PSGCityTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     PSGCityTableViewCell *cityCell = (PSGCityTableViewCell *)cell;
-    cityCell.selectedBackgroundView = [[UIView alloc] init];
-    cityCell.selectedBackgroundView.backgroundColor = [PSGHelper sharedInstance].colorSelectedCell;
+    cityCell.delegate = self;
     
     NSInteger index = indexPath.section / 2;
     NSArray *cities = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
