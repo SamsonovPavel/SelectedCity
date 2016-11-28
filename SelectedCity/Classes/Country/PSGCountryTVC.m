@@ -35,6 +35,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     [self loadData];
     [self refreshTableView];
     [self countryImagesArray];
+    [[PSGHelper sharedInstance] allObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,34 +102,31 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     self.imagesArray = [NSArray arrayWithObjects:russia, germany, unitedStates, nil];
 }
 
-// Вызывается при нажатии на секцию страны
-- (void)reloadSectionWithIndexPath:(NSIndexPath *)indexPath
-{    
-    [self.tableView beginUpdates];
-    NSIndexSet *set = [NSIndexSet indexSetWithIndex:indexPath.section + 1];
-    [self.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView endUpdates];
-}
-
 #pragma mark - PSGCityCellDelegate
 
+// Обработчик нажатия на кнопку "Добавить в избранное"
 - (void)cellFavoritesButtonPressed:(PSGCityTableViewCell *)sender button:(UIButton *)button
 {
     UITableViewCell *cell = [button superTableViewCell];
     
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//    NSLog(@"%@", indexPath);
-    
     if (cell)
     {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        NSLog(@"%ld", indexPath.section);
+        NSInteger index = indexPath.section / 2;
+        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
+
+        NSLog(@"%@", [[array objectAtIndex:indexPath.row] valueForKey:@"Name"]);
         
         Cities *cities = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Cities class])
                                                        inManagedObjectContext:[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext];
         if (cities != nil)
         {
+            cities.countryID = [[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"];
+            cities.name = [[array objectAtIndex:indexPath.row] valueForKey:@"Name"];
             
+            NSError *error = nil;
+            if (![[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:&error])
+                NSLog(@"Error - %@", [error localizedDescription]);
         }
     }
 }
@@ -258,51 +256,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
         if (!cityTableSectionsNumber5) cityTableSectionsNumber5 = YES;
         else cityTableSectionsNumber5 = NO;
     }
-    [self reloadSectionWithIndexPath:indexPath];
+    [self.tableView reloadData];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

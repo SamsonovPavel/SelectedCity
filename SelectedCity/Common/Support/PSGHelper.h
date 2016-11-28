@@ -27,5 +27,7 @@ static BOOL cityTableSectionsNumber1,
 
 - (UIFont *)setFontSize;
 - (UIColor *)colorSelectedCell;
+- (void)allObjects;
+- (void)deleteAllObjects;
 
 @end
