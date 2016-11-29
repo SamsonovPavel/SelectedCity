@@ -51,14 +51,6 @@ NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
     if (cell)
     {
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        
-//        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
-//        NSError *error = nil;
-//        NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
-//                                                                                                     error:&error];
-//        
-//        NSLog(@"%@", allObjects);
-        
         [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:object];
         [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
     }
@@ -132,21 +124,3 @@ NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
