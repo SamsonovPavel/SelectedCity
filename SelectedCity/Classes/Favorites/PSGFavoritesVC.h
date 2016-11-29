@@ -6,6 +6,6 @@
 //  Copyright © 2016 Pavel Samsonov. All rights reserved.
 //
 
-@interface PSGFavoritesVC : UIViewController
+@interface PSGFavoritesVC : PSGCommonMainVC
 
 @end

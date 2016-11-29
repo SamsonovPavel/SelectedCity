@@ -7,16 +7,23 @@
 //
 
 #import "PSGFavoritesVC.h"
+#import "PSGFavoritesCell.h"
+
+NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
+
+#define kFavoritesCellReuseIdn @"FavoritesCell"
 
 @interface PSGFavoritesVC ()
 
 @end
 
 @implementation PSGFavoritesVC
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupTableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -24,48 +31,72 @@
     [super didReceiveMemoryWarning];
 }
 
-//#pragma mark - NSFetchedResultsController
-//
-//- (NSFetchedResultsController *)fetchedResultsController
-//{
-//    return nil;
-//}
+#pragma mark - SETUP/INIT
+
+- (void)setupTableView
+{
+    self.navigationItem.title = @"Избранное";
+    [self.tableView registerNib:[UINib nibWithNibName:kFavoritesCellNibReuseIdn bundle:nil]
+         forCellReuseIdentifier:kFavoritesCellReuseIdn];
+}
+
+#pragma mark - NSFetchedResultsController
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([Cities class])
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"countryID" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _fetchedResultsController;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = (PSGFavoritesCell *)[tableView dequeueReusableCellWithIdentifier:kFavoritesCellReuseIdn
+                                                                                forIndexPath:indexPath];
+    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    [self configureFavoritesCell:(PSGFavoritesCell *)cell withObject:object];
+    
+    return cell;
+}
+
+#pragma mark UITableView cell configuration
+
+- (void)configureFavoritesCell:(PSGFavoritesCell *)cell withObject:(NSManagedObject *)object
+{
+    NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:object];
+    Cities *cities = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.cellInfo = cities.name;
+}
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -47,6 +47,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 
 - (void)setupTableView
 {
+    self.navigationItem.title = @"Страны";
     [self.tableView registerNib:[UINib nibWithNibName:kCountryCellNibReuseIdn bundle:nil]
             forCellReuseIdentifier:kCountryCellReuseIdn];
     [self.tableView registerNib:[UINib nibWithNibName:kCityCellNibReuseIdn bundle:nil]
@@ -238,6 +239,8 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     
     cityCell.cellInfo = [[cities objectAtIndex:indexPath.row] valueForKey:@"Name"];
 }
+
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

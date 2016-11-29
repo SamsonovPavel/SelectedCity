@@ -3,8 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -27,10 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-YR-QdN">
-                        <rect key="frame" x="418" y="13" width="32" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="dm7-YR-QdN" secondAttribute="height" multiplier="4:5" id="oNc-8s-t2d"/>
-                        </constraints>
+                        <rect key="frame" x="426" y="14" width="29" height="37"/>
                         <state key="normal" backgroundImage="favorites"/>
                         <connections>
                             <action selector="tapOnFavorites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dRW-H6-6of"/>
@@ -38,23 +34,27 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="centerY" secondItem="b6q-Qa-9sx" secondAttribute="centerY" id="4l6-SV-5hS"/>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="trailing" constant="50" id="A6m-28-vX5"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="bottom" constant="18" id="DWq-EK-qfF"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Dyt-iU-HLP"/>
-                    <constraint firstItem="dm7-YR-QdN" firstAttribute="centerY" secondItem="b6q-Qa-9sx" secondAttribute="centerY" id="Q2t-9T-Hwc"/>
+                    <constraint firstAttribute="trailing" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="25" id="YNE-J2-7O9"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aW9-He-Wpp"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="hd8-D0-PeY"/>
-                    <constraint firstItem="dm7-YR-QdN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="trailing" constant="42" id="qoa-X3-WVO"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="22" id="u6f-aj-Rjq"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="dm7-YR-QdN" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="10:165" id="Z5c-sT-AVg"/>
+                <constraint firstItem="dm7-YR-QdN" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="10:18" id="l36-qY-0FD"/>
+            </constraints>
             <connections>
                 <outlet property="cityLabel" destination="b6q-Qa-9sx" id="VeC-j6-LhN"/>
                 <outlet property="favoritesButton" destination="dm7-YR-QdN" id="C1s-IP-Ed8"/>
             </connections>
-            <point key="canvasLocation" x="279" y="312.5"/>
+            <point key="canvasLocation" x="391" y="508.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favorites" width="16" height="20"/>
+        <image name="favorites" width="35" height="43"/>
     </resources>
 </document>
