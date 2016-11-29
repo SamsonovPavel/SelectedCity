@@ -13,7 +13,7 @@ NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
 
 #define kFavoritesCellReuseIdn @"FavoritesCell"
 
-@interface PSGFavoritesVC ()
+@interface PSGFavoritesVC () <PSGFavoritesCellDelegate>
 
 @end
 

@@ -21,6 +21,7 @@
 		8496EDAB1DE9AA9F00609367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496EDA91DE9AA9F00609367 /* main.m */; };
 		84A85CBF1DED5C69001E812F /* PSGFavoritesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A85CBD1DED5C69001E812F /* PSGFavoritesCell.m */; };
 		84A85CC01DED5C69001E812F /* PSGFavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A85CBE1DED5C69001E812F /* PSGFavoritesCell.xib */; };
+		84A85CC51DED8D14001E812F /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A85CC41DED8D14001E812F /* Constant.m */; };
 		84D3355D1DEC521F002F4238 /* Cities+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335561DEC521F002F4238 /* Cities+CoreDataProperties.m */; };
 		84D3355E1DEC521F002F4238 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335581DEC521F002F4238 /* Cities.m */; };
 		84D3355F1DEC521F002F4238 /* ParentClass+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3355A1DEC521F002F4238 /* ParentClass+CoreDataProperties.m */; };
@@ -66,6 +67,8 @@
 		84A85CBC1DED5C69001E812F /* PSGFavoritesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGFavoritesCell.h; path = Classes/Favorites/Cell/PSGFavoritesCell.h; sourceTree = "<group>"; };
 		84A85CBD1DED5C69001E812F /* PSGFavoritesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGFavoritesCell.m; path = Classes/Favorites/Cell/PSGFavoritesCell.m; sourceTree = "<group>"; };
 		84A85CBE1DED5C69001E812F /* PSGFavoritesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSGFavoritesCell.xib; path = Classes/Favorites/Cell/PSGFavoritesCell.xib; sourceTree = "<group>"; };
+		84A85CC31DED8D14001E812F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Common/Support/Constant/Constant.h; sourceTree = "<group>"; };
+		84A85CC41DED8D14001E812F /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = Common/Support/Constant/Constant.m; sourceTree = "<group>"; };
 		84D335551DEC521F002F4238 /* Cities+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cities+CoreDataProperties.h"; path = "Models/CityModels/Cities+CoreDataProperties.h"; sourceTree = "<group>"; };
 		84D335561DEC521F002F4238 /* Cities+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cities+CoreDataProperties.m"; path = "Models/CityModels/Cities+CoreDataProperties.m"; sourceTree = "<group>"; };
 		84D335571DEC521F002F4238 /* Cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cities.h; path = Models/CityModels/Cities.h; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				840369C41DE8D97C008BFE83 /* Macroses.h */,
+				84A85CC61DED8D1C001E812F /* Constant */,
 				848CAC371DEA2DD900859BCC /* PSGHelper.h */,
 				848CAC381DEA2DD900859BCC /* PSGHelper.m */,
 			);
@@ -258,11 +262,28 @@
 		84A85CC11DED5C71001E812F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				84A85CC21DED6F15001E812F /* FavoritesCell */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		84A85CC21DED6F15001E812F /* FavoritesCell */ = {
+			isa = PBXGroup;
+			children = (
 				84A85CBC1DED5C69001E812F /* PSGFavoritesCell.h */,
 				84A85CBD1DED5C69001E812F /* PSGFavoritesCell.m */,
 				84A85CBE1DED5C69001E812F /* PSGFavoritesCell.xib */,
 			);
-			name = Cell;
+			name = FavoritesCell;
+			sourceTree = "<group>";
+		};
+		84A85CC61DED8D1C001E812F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				84A85CC31DED8D14001E812F /* Constant.h */,
+				84A85CC41DED8D14001E812F /* Constant.m */,
+			);
+			name = Constant;
 			sourceTree = "<group>";
 		};
 		84D335611DEC5230002F4238 /* CityModels */ = {
@@ -477,6 +498,7 @@
 				848CAC391DEA2DD900859BCC /* PSGHelper.m in Sources */,
 				840369DA1DE8DE9E008BFE83 /* PSGCoreDataAPI.m in Sources */,
 				84D3355D1DEC521F002F4238 /* Cities+CoreDataProperties.m in Sources */,
+				84A85CC51DED8D14001E812F /* Constant.m in Sources */,
 				8496EDA41DE9A9BA00609367 /* AppDelegate.m in Sources */,
 				84D335641DEC66CF002F4238 /* UIView+UITableViewCell.m in Sources */,
 				8496ED9B1DE9A98000609367 /* PSGFavoritesVC.m in Sources */,

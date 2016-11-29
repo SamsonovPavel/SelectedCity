@@ -9,6 +9,7 @@
 #import "PSGCountryTVC.h"
 #import "PSGCountryTableViewCell.h"
 #import "PSGCityTableViewCell.h"
+#import "PSGFavoritesCell.h"
 
 NSString *const kCountryCellNibReuseIdn = @"PSGCountryTableViewCell";
 NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
@@ -16,7 +17,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 #define kCountryCellReuseIdn @"CountryCell"
 #define kCityCellReuseIdn    @"CityCell"
 
-@interface PSGCountryTVC () <PSGCityCellDelegate>
+@interface PSGCountryTVC () <PSGCityCellDelegate, PSGFavoritesCellDelegate>
 
 @property (strong, nonatomic) NSArray *loadDataArray;
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
@@ -35,7 +36,9 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     [self loadData];
     [self refreshTableView];
     [self countryImagesArray];
-    [[PSGHelper sharedInstance] allObjects];
+    
+//    [[PSGHelper sharedInstance] allObjects];        // Вывести все объекты в лог
+//    [[PSGHelper sharedInstance] deleteAllObjects];  // Удалить все объекты
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,11 +115,27 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     
     if (cell)
     {
+        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
+        NSError *error = nil;
+        NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
+                                                                                                     error:&error];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSInteger index = indexPath.section / 2;
         NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
-
-        NSLog(@"%@", [[array objectAtIndex:indexPath.row] valueForKey:@"Name"]);
+        
+        for (Cities *cities in allObjects)
+        {
+            if ([cities.countryID isEqual:[[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"]] &
+                [cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:@"Name"]])
+            {
+                [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:cities];
+                [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
+                
+                [button setImage:[UIImage imageNamed:kFavoritesImage] forState:UIControlStateNormal];
+                
+                return;
+            }
+        }
         
         Cities *cities = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Cities class])
                                                        inManagedObjectContext:[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext];
@@ -128,8 +147,30 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
             NSError *error = nil;
             if (![[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:&error])
                 NSLog(@"Error - %@", [error localizedDescription]);
+            
+            [button setImage:[UIImage imageNamed:kFavoritesImagePressed] forState:UIControlStateNormal];
         }
     }
+}
+
+#pragma mark - PSGFavoritesCellDelegate
+
+// Обработчик нажатия на кнопку "Удалить из избранного"
+- (void)cellDeleteFromFavoritesButtonPressed:(PSGFavoritesCell *)sender button:(UIButton *)button
+{
+    UITableViewCell *cell = [button superTableViewCell];
+    
+    if (cell)
+    {
+        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
+        NSError *error = nil;
+        NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
+                                                                                                     error:&error];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:[allObjects objectAtIndex:indexPath.row]];
+        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -141,6 +182,8 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSInteger countRow = [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:@"Cities"] count];
+    
     switch (section % 2)
     {
         case TableCountrySections:
@@ -153,21 +196,21 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
             {
                 case CityTableSectionsNumber1:
                     if (cityTableSectionsNumber1)
-                        return [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:@"Cities"] count];
+                        return countRow;
                     else
                         return 0;
                     break;
                     
                 case CityTableSectionsNumber3:
                     if (cityTableSectionsNumber3)
-                        return [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:@"Cities"] count];
+                        return countRow;
                     else
                         return 0;
                     break;
                     
                 case CityTableSectionsNumber5:
                     if (cityTableSectionsNumber5)
-                        return [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:@"Cities"] count];
+                        return countRow;
                     else
                         return 0;
                     break;
@@ -238,6 +281,26 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     NSArray *cities = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
     
     cityCell.cellInfo = [[cities objectAtIndex:indexPath.row] valueForKey:@"Name"];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
+    NSError *error = nil;
+    NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
+                                                                                                 error:&error];
+    if ([allObjects count] > 0)
+    {
+        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
+        
+        for (Cities *cities in allObjects)
+        {
+            if ([cities.countryID isEqual:[[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"]] &
+                [cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:@"Name"]])
+                [cityCell.favoritesButton setImage:[UIImage imageNamed:kFavoritesImagePressed] forState:UIControlStateNormal];
+            else
+                [cityCell.favoritesButton setImage:[UIImage imageNamed:kFavoritesImage] forState:UIControlStateNormal];
+        }
+    }
+    else
+        [cityCell.favoritesButton setImage:[UIImage imageNamed:kFavoritesImage] forState:UIControlStateNormal];
 }
 
 #pragma mark - UITableViewDelegate

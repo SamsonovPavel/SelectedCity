@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-YR-QdN">
-                        <rect key="frame" x="426" y="14" width="29" height="37"/>
+                        <rect key="frame" x="421" y="14" width="29" height="37"/>
                         <state key="normal" backgroundImage="favorites"/>
                         <connections>
                             <action selector="tapOnFavorites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dRW-H6-6of"/>
@@ -38,7 +38,7 @@
                     <constraint firstItem="dm7-YR-QdN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="trailing" constant="50" id="A6m-28-vX5"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="bottom" constant="18" id="DWq-EK-qfF"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Dyt-iU-HLP"/>
-                    <constraint firstAttribute="trailing" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="25" id="YNE-J2-7O9"/>
+                    <constraint firstAttribute="trailing" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="30" id="YNE-J2-7O9"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aW9-He-Wpp"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="hd8-D0-PeY"/>
                 </constraints>
@@ -51,7 +51,7 @@
                 <outlet property="cityLabel" destination="b6q-Qa-9sx" id="VeC-j6-LhN"/>
                 <outlet property="favoritesButton" destination="dm7-YR-QdN" id="C1s-IP-Ed8"/>
             </connections>
-            <point key="canvasLocation" x="391" y="508.5"/>
+            <point key="canvasLocation" x="553" y="321.5"/>
         </tableViewCell>
     </objects>
     <resources>

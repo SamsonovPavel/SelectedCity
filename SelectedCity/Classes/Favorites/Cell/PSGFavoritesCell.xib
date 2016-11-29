@@ -28,6 +28,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-Sb-nXk">
                         <rect key="frame" x="418" y="10" width="40" height="45"/>
                         <state key="normal" backgroundImage="clear"/>
+                        <connections>
+                            <action selector="tapOnDeleteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AZV-9S-Tmu"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
