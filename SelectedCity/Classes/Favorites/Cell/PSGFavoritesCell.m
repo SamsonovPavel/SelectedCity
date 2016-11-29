@@ -21,10 +21,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    UITabBarController *tabBar = (UITabBarController *)ApplicationDelegate.window.rootViewController;
-    UINavigationController *nc = (UINavigationController *)[tabBar.viewControllers firstObject];
-    self.delegate = [nc.viewControllers firstObject];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

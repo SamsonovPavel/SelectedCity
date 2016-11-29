@@ -40,6 +40,37 @@ NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
          forCellReuseIdentifier:kFavoritesCellReuseIdn];
 }
 
+#pragma mark - PSGFavoritesCellDelegate
+
+// Обработчик нажатия на кнопку "Удалить из избранного"
+- (void)cellDeleteFromFavoritesButtonPressed:(PSGFavoritesCell *)sender button:(UIButton *)button
+{
+    PSGFavoritesCell *cell = (PSGFavoritesCell *)[button superTableViewCell];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    if (cell)
+    {
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
+//        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
+//        NSError *error = nil;
+//        NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
+//                                                                                                     error:&error];
+//        
+//        NSLog(@"%@", allObjects);
+        
+        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:object];
+        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
+    }
+    
+    UITabBarController *tabBar = (UITabBarController *)ApplicationDelegate.window.rootViewController;
+    UINavigationController *nc = (UINavigationController *)[tabBar.viewControllers firstObject];
+    self.delegate = [nc.viewControllers firstObject];
+    
+    if ([self.delegate respondsToSelector:@selector(reloadTableViewControllerButtonPressed:)])
+        [self.delegate reloadTableViewControllerButtonPressed:self];
+}
+
 #pragma mark - NSFetchedResultsController
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -97,6 +128,25 @@ NSString *const kFavoritesCellNibReuseIdn = @"PSGFavoritesCell";
     Cities *cities = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.cellInfo = cities.name;
+    cell.delegate = self;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,6 +10,7 @@
 #import "PSGCountryTableViewCell.h"
 #import "PSGCityTableViewCell.h"
 #import "PSGFavoritesCell.h"
+#import "PSGFavoritesVC.h"
 
 NSString *const kCountryCellNibReuseIdn = @"PSGCountryTableViewCell";
 NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
@@ -17,7 +18,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 #define kCountryCellReuseIdn @"CountryCell"
 #define kCityCellReuseIdn    @"CityCell"
 
-@interface PSGCountryTVC () <PSGCityCellDelegate, PSGFavoritesCellDelegate>
+@interface PSGCountryTVC () <PSGCityCellDelegate, PSGFavoritesVCDelegate>
 
 @property (strong, nonatomic) NSArray *loadDataArray;
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
@@ -158,23 +159,10 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     }
 }
 
-#pragma mark - PSGFavoritesCellDelegate
+#pragma mark - PSGFavoritesVCDelegate
 
-// Обработчик нажатия на кнопку "Удалить из избранного"
-- (void)cellDeleteFromFavoritesButtonPressed:(PSGFavoritesCell *)sender button:(UIButton *)button
+- (void)reloadTableViewControllerButtonPressed:(PSGFavoritesVC *)sender
 {
-    UITableViewCell *cell = [button superTableViewCell];
-
-    if (cell)
-    {
-        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
-        NSError *error = nil;
-        NSArray *allObjects = [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext executeFetchRequest:request
-                                                                                                     error:&error];
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:[allObjects objectAtIndex:indexPath.row]];
-        [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
-    }
     [self.tableView reloadData];
 }
 
