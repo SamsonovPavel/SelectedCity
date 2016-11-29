@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -26,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-Sb-nXk">
-                        <rect key="frame" x="418" y="10" width="40" height="45"/>
+                        <rect key="frame" x="394" y="8" width="70" height="50"/>
                         <state key="normal" backgroundImage="clear"/>
                         <connections>
                             <action selector="tapOnDeleteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AZV-9S-Tmu"/>
@@ -35,14 +36,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="syL-gx-uXH" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="2vE-71-jyG"/>
-                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:12" id="6LN-dM-12C"/>
-                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="leading" relation="lessThanOrEqual" secondItem="syL-gx-uXH" secondAttribute="trailing" constant="42" id="CPE-fZ-2Jt"/>
-                    <constraint firstAttribute="trailing" secondItem="SgC-Sb-nXk" secondAttribute="trailing" constant="22" id="CtE-Pf-fU4"/>
+                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="10:13" id="CWY-vm-Opw"/>
                     <constraint firstItem="syL-gx-uXH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Fha-el-RQP"/>
-                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="centerY" secondItem="syL-gx-uXH" secondAttribute="centerY" id="LXk-9s-5Yp"/>
+                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="leading" secondItem="syL-gx-uXH" secondAttribute="trailing" constant="18" id="LBa-As-dJt"/>
+                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="10:68" id="O3e-sG-lB2"/>
                     <constraint firstItem="syL-gx-uXH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PRd-sT-DcU"/>
-                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="100:147" id="RUn-oQ-YFJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SgC-Sb-nXk" secondAttribute="trailing" constant="8" id="T94-eX-Zv0"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="syL-gx-uXH" secondAttribute="bottom" constant="18" id="WWx-fY-afO"/>
+                    <constraint firstItem="SgC-Sb-nXk" firstAttribute="centerY" secondItem="syL-gx-uXH" secondAttribute="centerY" id="uvs-zM-Sv9"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -52,6 +53,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clear" width="60" height="65"/>
+        <image name="clear" width="90" height="65"/>
     </resources>
 </document>

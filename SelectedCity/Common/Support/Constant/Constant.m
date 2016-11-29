@@ -8,3 +8,7 @@
 
 NSString *const kFavoritesImage        = @"favorites";
 NSString *const kFavoritesImagePressed = @"favorites_pressed";
+NSString *const kPlaceholderString     = @"placeholder";
+NSString *const kCountryID             = @"CountryId";
+NSString *const kCities                = @"Cities";
+NSString *const kName                  = @"Name";

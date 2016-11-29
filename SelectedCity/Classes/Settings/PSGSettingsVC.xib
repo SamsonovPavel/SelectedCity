@@ -3,18 +3,39 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PSGSettingsVC">
             <connections>
+                <outlet property="settingsLabel" destination="hlL-0w-hee" id="XIM-Zw-Ume"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="710"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlL-0w-hee">
+                    <rect key="frame" x="50" y="339" width="300" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hlL-0w-hee" secondAttribute="height" multiplier="300:31" id="ORg-jA-557"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hlL-0w-hee" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YqH-mg-BIh"/>
+                <constraint firstItem="hlL-0w-hee" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="h3Z-9K-UgY"/>
+                <constraint firstAttribute="trailing" secondItem="hlL-0w-hee" secondAttribute="trailing" constant="50" id="jMm-A4-hDS"/>
+                <constraint firstItem="hlL-0w-hee" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yvh-cm-Vt9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="492" y="428"/>
         </view>
     </objects>
 </document>

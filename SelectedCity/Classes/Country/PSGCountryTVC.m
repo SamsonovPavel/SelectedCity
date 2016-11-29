@@ -79,7 +79,12 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
         
         weakSelf.loadDataArray = [NSArray arrayWithArray:[data valueForKey:@"Result"]];
         cityTableSectionsNumber1 = cityTableSectionsNumber3 = cityTableSectionsNumber5 = NO;
-        [weakSelf.tableView reloadData];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
+        
         [weakSelf.activityIndicator stopAnimating];
         
     } connectionError:^(NSError * _Nonnull error) {
@@ -121,12 +126,12 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
                                                                                                      error:&error];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSInteger index = indexPath.section / 2;
-        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
+        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:kCities];
         
         for (Cities *cities in allObjects)
         {
-            if ([cities.countryID isEqual:[[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"]] &
-                [cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:@"Name"]])
+            if ([cities.countryID isEqual:[[array objectAtIndex:indexPath.row] valueForKey:kCountryID]] &
+                [cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:kName]])
             {
                 [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext deleteObject:cities];
                 [[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:nil];
@@ -141,8 +146,8 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
                                                        inManagedObjectContext:[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext];
         if (cities != nil)
         {
-            cities.countryID = [[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"];
-            cities.name = [[array objectAtIndex:indexPath.row] valueForKey:@"Name"];
+            cities.countryID = [[array objectAtIndex:indexPath.row] valueForKey:kCountryID];
+            cities.name = [[array objectAtIndex:indexPath.row] valueForKey:kName];
             
             NSError *error = nil;
             if (![[PSGCoreDataAPI sharedCoreDataAPI].managedObjectContext save:&error])
@@ -159,7 +164,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 - (void)cellDeleteFromFavoritesButtonPressed:(PSGFavoritesCell *)sender button:(UIButton *)button
 {
     UITableViewCell *cell = [button superTableViewCell];
-    
+
     if (cell)
     {
         NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
@@ -182,7 +187,7 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger countRow = [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:@"Cities"] count];
+    NSInteger countRow = [[[self.loadDataArray objectAtIndex:section / 2] valueForKey:kCities] count];
     
     switch (section % 2)
     {
@@ -264,12 +269,12 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     NSInteger index = indexPath.section / 2;
     NSString *imagePath = [[self.loadDataArray objectAtIndex:index] valueForKey:@"ImageLink"];
     NSURL *imageURL = [NSURL URLWithString:imagePath];
-    [countryCell.flagImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [countryCell.flagImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:kPlaceholderString]];
     
-    if ([countryCell.flagImageView.image isEqual:[UIImage imageNamed:@"placeholder"]])
+    if ([countryCell.flagImageView.image isEqual:[UIImage imageNamed:kPlaceholderString]])
         countryCell.flagImageView.image = [self.imagesArray objectAtIndex:index];
     
-    countryCell.cellInfo = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Name"];
+    countryCell.cellInfo = [[self.loadDataArray objectAtIndex:index] valueForKey:kName];
 }
 
 - (void)configureCityCell:(PSGCityTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
@@ -278,9 +283,9 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
     cityCell.delegate = self;
     
     NSInteger index = indexPath.section / 2;
-    NSArray *cities = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
+    NSArray *cities = [[self.loadDataArray objectAtIndex:index] valueForKey:kCities];
     
-    cityCell.cellInfo = [[cities objectAtIndex:indexPath.row] valueForKey:@"Name"];
+    cityCell.cellInfo = [[cities objectAtIndex:indexPath.row] valueForKey:kName];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([Cities class])];
     NSError *error = nil;
@@ -288,13 +293,15 @@ NSString *const kCityCellNibReuseIdn    = @"PSGCityTableViewCell";
                                                                                                  error:&error];
     if ([allObjects count] > 0)
     {
-        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:@"Cities"];
+        NSArray *array = [[self.loadDataArray objectAtIndex:index] valueForKey:kCities];
         
         for (Cities *cities in allObjects)
         {
-            if ([cities.countryID isEqual:[[array objectAtIndex:indexPath.row] valueForKey:@"CountryId"]] &
-                [cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:@"Name"]])
+            if ([cities.name isEqualToString:[[array objectAtIndex:indexPath.row] valueForKey:kName]])
+            {
                 [cityCell.favoritesButton setImage:[UIImage imageNamed:kFavoritesImagePressed] forState:UIControlStateNormal];
+                return;
+            }
             else
                 [cityCell.favoritesButton setImage:[UIImage imageNamed:kFavoritesImage] forState:UIControlStateNormal];
         }

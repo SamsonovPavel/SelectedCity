@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -26,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-YR-QdN">
-                        <rect key="frame" x="421" y="14" width="29" height="37"/>
+                        <rect key="frame" x="394" y="8" width="70" height="50"/>
                         <state key="normal" backgroundImage="favorites"/>
                         <connections>
                             <action selector="tapOnFavorites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dRW-H6-6of"/>
@@ -34,27 +35,25 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="dm7-YR-QdN" firstAttribute="centerY" secondItem="b6q-Qa-9sx" secondAttribute="centerY" id="4l6-SV-5hS"/>
-                    <constraint firstItem="dm7-YR-QdN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="trailing" constant="50" id="A6m-28-vX5"/>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="10:13" id="3uy-Hs-c0J"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="8" id="6eZ-x1-q5j"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="bottom" constant="18" id="DWq-EK-qfF"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Dyt-iU-HLP"/>
-                    <constraint firstAttribute="trailing" secondItem="dm7-YR-QdN" secondAttribute="trailing" constant="30" id="YNE-J2-7O9"/>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b6q-Qa-9sx" secondAttribute="trailing" constant="18" id="IrS-KU-B6R"/>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="centerY" secondItem="b6q-Qa-9sx" secondAttribute="centerY" id="Wnt-tJ-5bl"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aW9-He-Wpp"/>
                     <constraint firstItem="b6q-Qa-9sx" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="hd8-D0-PeY"/>
+                    <constraint firstItem="dm7-YR-QdN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="10:68" id="kNS-cK-wTW"/>
                 </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="dm7-YR-QdN" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="10:165" id="Z5c-sT-AVg"/>
-                <constraint firstItem="dm7-YR-QdN" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="10:18" id="l36-qY-0FD"/>
-            </constraints>
             <connections>
                 <outlet property="cityLabel" destination="b6q-Qa-9sx" id="VeC-j6-LhN"/>
                 <outlet property="favoritesButton" destination="dm7-YR-QdN" id="C1s-IP-Ed8"/>
             </connections>
-            <point key="canvasLocation" x="553" y="321.5"/>
+            <point key="canvasLocation" x="692" y="415.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favorites" width="35" height="43"/>
+        <image name="favorites" width="90" height="60"/>
     </resources>
 </document>

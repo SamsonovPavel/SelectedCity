@@ -10,6 +10,8 @@
 
 @interface PSGSettingsVC ()
 
+@property (weak, nonatomic) IBOutlet UILabel *settingsLabel;
+
 @end
 
 @implementation PSGSettingsVC
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Настройки";
+    
+    NSInteger fontSize = (int)CGRectGetWidth([UIScreen mainScreen].bounds) / 18;
+    self.settingsLabel.font = [UIFont systemFontOfSize:fontSize];
 }
 
 - (void)didReceiveMemoryWarning

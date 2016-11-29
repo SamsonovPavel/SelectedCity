@@ -6,7 +6,9 @@
 //  Copyright © 2016 Pavel Samsonov. All rights reserved.
 //
 
-#pragma mark - Images
-
 extern NSString *const kFavoritesImage;
 extern NSString *const kFavoritesImagePressed;
+extern NSString *const kPlaceholderString;
+extern NSString *const kCountryID;
+extern NSString *const kCities;
+extern NSString *const kName;

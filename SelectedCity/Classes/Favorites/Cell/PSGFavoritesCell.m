@@ -21,7 +21,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     UITabBarController *tabBar = (UITabBarController *)ApplicationDelegate.window.rootViewController;
     UINavigationController *nc = (UINavigationController *)[tabBar.viewControllers firstObject];
